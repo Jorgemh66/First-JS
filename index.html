@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="list">
 <meta charset="utf-8">
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
 	<title>First JS</title>
 </head>
-<body>
-
+<body ng-controller="listcontroller">
+	<h1>ToDo</h1>
+	<input type="" ng-model="entry" placeholder=" Ingresar tarea">
+	<input type="submit" value="Añadir" ng-click="save()">
+	
+	<ul ng-repeat="add in content track by $index">
+		<li> 
+			{{add}}
+		</li>
+	</ul>
+	
 </body>
+		<script src="interact.js"></script>
 </html>
